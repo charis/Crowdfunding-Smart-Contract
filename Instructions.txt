@@ -1,0 +1,55 @@
+Below are the commands that you need to run the project from sctrach
+
+INSTALLATION
+-------------
+$ brew update
+
+Install Clarinet
+$ brew install clarinet
+  Note: To verify the installation is successful give: $ clarinet --version
+
+
+OPTION 1: USE UPLOADED PROJECT
+-------------------------------
+Copy the 'crowdfunding' root directory locally and go to that directory.
+$ cd crowdfunding
+
+To setup testing for (see 'B. Unit Tests') we need to execute once the following command:
+$ npm install
+
+To disable the hints that are printed in the terminal output (optional) give:
+$ mkdir -p ~/.clarinet; echo "enable_hints = false" >> ~/.clarinet/clarinetrc.toml
+ 
+A. Syntax Verification
+To check the syntax for all files in ./contracts (i.e., contracts/crowdfunding.clar) give:
+$ clarinet check
+
+B. Unit Tests
+To execute the TypeScript unit tests for our contract (i.e., file tests/crowdfunding.test.ts) give:
+$ npm test
+
+
+OPTION 2: CREATE A NEW PROJECT
+-------------------------------
+$ clarinet new crowdfunding
+$ cd crowdfunding
+
+- Overwrite contracts/crowdfunding.clar with the uploaded crowdfunding.clar file.
+- Overwrite tests/crowdfunding.test.ts with the uploaded crowdfunding.test.ts file.
+- Overwrite settings/Devnet.toml with the uploaded Devnet.toml file.
+
+The remaining steps are the same as in Option 1:
+
+To setup testing for (see 'B. Unit Tests') we need to execute once the following command:
+$ npm install
+
+To disable the hints that are printed in the terminal output (optional) give:
+$ mkdir -p ~/.clarinet; echo "enable_hints = false" >> ~/.clarinet/clarinetrc.toml
+ 
+A. Syntax Verification
+To check the syntax for all files in ./contracts (i.e., contracts/crowdfunding.clar) give:
+$ clarinet check
+
+B. Unit Tests
+To execute the TypeScript unit tests for our contract (i.e., file tests/crowdfunding.test.ts) give:
+$ npm test
